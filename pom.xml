@@ -14,10 +14,15 @@
 	<name>tc-s1-32-producao-api</name>
 	<description>Tech Challenge - Projeto da Turma 32 - SOAT 1 - API de Produção</description>
 	<properties>
-		<java.version>17</java.version>
-	</properties>
-	<dependencies>
-		<dependencies>
+        <java.version>17</java.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <jacoco.version>0.8.8</jacoco.version>
+        <jacoco.outputDir>${project.basedir}/target/jacoco.exec</jacoco.outputDir>
+    </properties>
+	
+	<dependencyManagement>
+        <dependencies>
             <dependency>
                 <groupId>org.springframework.cloud</groupId>
                 <artifactId>spring-cloud-dependencies</artifactId>
@@ -76,7 +81,7 @@
             <version>${jacoco.version}</version>
             <scope>test</scope>
         </dependency> 
-	</dependencies>
+    </dependencies>
 
 	<build>
 		<plugins>
