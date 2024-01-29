@@ -26,17 +26,17 @@ public class ProducaoController {
 	
 	private final PedidoService pedidoService;
 
-	@PutMapping("/v1/pedidos/{id}/{status}")
+	@PutMapping("/v1/producao/{id}/{status}")
 	@ApiResponse(responseCode = "204", description = "Status de preparação do pedido alterado com sucesso")
 	@ApiResponse(responseCode = "422", description = "Erro de validação",
 			content = @Content(schema = @Schema(implementation = RespostaErro.class)))
 	@Operation(description = "Altera status de preparação do pedido")
 	public ResponseEntity<Void> atualizarstatusPedido(@PathVariable Long id, @PathVariable StatusPreparacaoPedido status) {
-		pedidoService.atualizarstatusPedido(id, status);
+		pedidoService.alterarStatusPreparacaoPedido(id, status);
 		return ResponseEntity.noContent().build();
 	}
 	
-	@GetMapping("/v1/pedidos")
+	@GetMapping("/v1/producao")
 	@ApiResponse(responseCode = "200", description = "Status de pedido retornado com sucesso")
 	@ApiResponse(responseCode = "422", description = "Erro de validação",
 			content = @Content(schema = @Schema(implementation = RespostaErro.class)))
