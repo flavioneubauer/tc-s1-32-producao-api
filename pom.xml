@@ -157,7 +157,7 @@
                                 <include>br/com/fiap/soat1/t32/controllers/**</include>
                             </includes>
                             <formats>
-                                <format>HTML</format>
+                                <format>XML</format>
                             </formats>
                         </configuration>
                     </execution>
