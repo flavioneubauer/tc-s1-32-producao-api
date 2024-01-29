@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import br.com.fiap.soat1.t32.enums.StatusPreparacaoPedido;
 import br.com.fiap.soat1.t32.models.presenters.pedidos.ListaPedidosResponse;
 
-@FeignClient(value = "${pedido.api.base-path}")
+@FeignClient(name = "pedidoClient", url = "${pedido.api.base-path}")
 public interface PedidoClient {
 
     @PutMapping(value = "/v1/pedidos/{id}/{status}", consumes = APPLICATION_JSON_VALUE)
