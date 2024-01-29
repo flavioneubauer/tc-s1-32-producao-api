@@ -13,7 +13,7 @@
 	<version>1.0.0-SNAPSHOT</version>
 	<name>tc-s1-32-producao-api</name>
 	<description>Tech Challenge - Projeto da Turma 32 - SOAT 1 - API de Produção</description>
-	 <properties>
+	<properties>
         <java.version>17</java.version>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
@@ -157,7 +157,7 @@
                                 <include>br/com/fiap/soat1/t32/controllers/**</include>
                             </includes>
                             <formats>
-                                <format>XML</format>
+                                <format>HTML</format>
                             </formats>
                         </configuration>
                     </execution>

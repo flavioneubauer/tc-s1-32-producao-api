@@ -52,4 +52,11 @@ class PedidoServiceTest {
 
 		verify(pedidoClient).listarPedidos();
 	}
+	
+	@Test
+	void deveListar_FeignException() {
+		when(pedidoClient.listarPedidos()).thenThrow(FeignException.class);
+
+		assertThrows(IntegrationException.class, () -> pedidoService.listar());
+	}
 }
