@@ -6,6 +6,8 @@ COPY .mvn .mvn
 COPY pom.xml .
 COPY src src
 
+# Grant executable permissions to mvnw
+RUN chmod +x mvnw
 RUN ./mvnw clean install -DskipTests && ./mvnw clean package -DskipTests
 
 FROM eclipse-temurin:17-jre-alpine
